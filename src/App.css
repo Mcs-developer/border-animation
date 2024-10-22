@@ -19,21 +19,23 @@ body {
 
 .card {
   width: 243px;
-  height: 260px;
-  text-align: center;
-  margin: 0 auto;
-  background-color: #fff;
+  min-height: 260px;
   border: 1px solid;
   border-radius: var(--border-rad);
   position: relative;
   overflow: hidden;
 }
 
+.content {
+  position: relative;
+  z-index: 1;
+}
+
 .card::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 170%;
+  width: 150%;
+  height: 150%;
   border-radius: var(--border-rad);
   background: conic-gradient( from 160deg at 50% 50%,
   #34CFFA 4.9358053877949715deg, 
@@ -51,11 +53,10 @@ body {
 }
 
 .card::after {
-  /* display: none; */
   content: '';
   position: absolute;
   inset: 2px;
-  background-color: white;
+  background-color: #fff;
   border-radius: var(--border-rad);
   filter: blur(2.5px);
 }
